@@ -6,10 +6,12 @@ import {motion} from "framer-motion"
 
 function App() {
   return (
-    <div className="App bg-slate-800 snap-x">
-      <Header className="snap-center"></Header>
-      <SectionTwo className="snap-center"></SectionTwo>
-      <SectionThree className="snap-center"></SectionThree>
+    <div className="App">
+      <div className=' bg-slate-800 snap-y snap-mandatory h-screen overflow-scroll scroll-smooth'>
+      <Header></Header>
+      <SectionTwo></SectionTwo>
+      <SectionThree></SectionThree>
+      </div>
     </div>
   );
 }
