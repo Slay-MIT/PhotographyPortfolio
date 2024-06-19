@@ -3,3 +3,6 @@
 @tailwind utilities;
 
 /* You can add custom styles here if needed */
+html {
+    scroll-behavior: smooth;
+  }
