@@ -1,8 +1,24 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 function Cards() {
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <motion.div 
+      className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      whileHover={{
+        
+        scale: 1.05, 
+        rotate: 0,
+        translateY: -10,
+        // translateX: -10,
+        transition: { duration: 0.3 }
+      }}
+      whileTap={{
+        scale: 1,
+        // rotate: -90,
+        // borderRadius: "100%"
+      }}
+    >
       <a href="#">
         <img
           className="rounded-t-lg"
@@ -41,7 +57,7 @@ function Cards() {
           </svg>
         </a> */}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
