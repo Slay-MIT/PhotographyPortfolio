@@ -28,9 +28,9 @@ function SectionTwo() {
           <motion.div
             key={card.key}
             className="flex-shrink-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            initial={{ scale: 0 }}
+            animate={{ rotate: 360, scale: 1 }}
+            transition={{ type:"tween", duration: 0.3 }}
           >
             {card}
           </motion.div>
