@@ -2,7 +2,6 @@ import './App.css';
 import Header from './components/Header';
 import SectionTwo from './sections/SectionTwo';
 import SectionThree from './sections/SectionThree';
-import {motion} from "framer-motion"
 
 function App() {
   return (
