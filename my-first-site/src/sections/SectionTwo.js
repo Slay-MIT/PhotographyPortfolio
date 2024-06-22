@@ -1,38 +1,48 @@
+// sections/SectionTwo.js
 import React, { useState } from 'react';
 import Cards from '../components/Cards';
 import { motion } from 'framer-motion';
 
+const src = "https://www.instagram.com/shreyashshubh/p/";
+const cardDict = {
+  "1": [src + "C0Dm5i6yS2D/", "Lightning"],
+  "2": [src + "C2wL5VKS5d6/", "Watch"],
+  "3": [src + "CxQAuPzLYou/", "Tower"],
+  "4": [src + "CzZGR7qMe2x/", "Something"],
+  "5": [src + "CrbRkxYr5zJ/", "Something-2"],
+  "6": [src + "Cu1mr1OL6R0/", "Something-3"],
+};
+
 function SectionTwo() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const cards = [
-    <Cards key="1" />,
-    <Cards key="2" />,
-    <Cards key="3" />,
-    <Cards key="4" />,
-    <Cards key="5" />,
-    <Cards key="6" />,
-  ];
+
+  const cardsData = Object.entries(cardDict).map(([key, [link, caption]]) => ({
+    key,
+    link,
+    caption,
+    imageUrl: "https://via.placeholder.com/400", // Replace with actual image URL if needed
+  }));
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? cards.length - 3 : prevIndex - 3));
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? cardsData.length - 3 : prevIndex - 3));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 3 >= cards.length ? 0 : prevIndex + 3));
+    setCurrentIndex((prevIndex) => (prevIndex + 3 >= cardsData.length ? 0 : prevIndex + 3));
   };
 
   return (
     <section className="h-screen flex justify-center items-center snap-center overflow-hidden scroll-smooth relative">
       <div className="flex justify-center items-center space-x-4 w-full">
-        {cards.slice(currentIndex, currentIndex + 3).map((card) => (
+        {cardsData.slice(currentIndex, currentIndex + 3).map((card) => (
           <motion.div
             key={card.key}
             className="flex-shrink-0"
             initial={{ scale: 0 }}
             animate={{ rotate: 360, scale: 1 }}
-            transition={{ type:"tween", duration: 0.3 }}
+            transition={{ type: "tween", duration: 0.3 }}
           >
-            {card}
+            <Cards imageUrl={card.imageUrl} caption={card.caption} link={card.link} />
           </motion.div>
         ))}
       </div>
