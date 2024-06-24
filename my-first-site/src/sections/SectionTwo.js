@@ -49,7 +49,7 @@ function SectionTwo() {
 
   return (
     <section className="h-screen flex justify-center items-center snap-center overflow-hidden scroll-smooth relative">
-      <div className="flex justify-center items-center space-x-4 w-full overflow-hidden relative">
+      <div className="flex justify-center items-center space-x-4 w-full relative">
         {getVisibleCards().map((card) => (
           <motion.div
             key={card.key}
