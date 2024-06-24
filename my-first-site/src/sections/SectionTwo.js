@@ -24,17 +24,25 @@ function SectionTwo() {
   }));
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? cardsData.length - 3 : prevIndex - 3));
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? cardsData.length - 1 : prevIndex - 1));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 3 >= cardsData.length ? 0 : prevIndex + 3));
+    setCurrentIndex((prevIndex) => (prevIndex + 1 === cardsData.length ? 0 : prevIndex + 1));
+  };
+
+  const getVisibleCards = () => {
+    return [
+      cardsData[currentIndex],
+      cardsData[(currentIndex + 1) % cardsData.length],
+      cardsData[(currentIndex + 2) % cardsData.length],
+    ];
   };
 
   return (
     <section className="h-screen flex justify-center items-center snap-center overflow-hidden scroll-smooth relative">
       <div className="flex justify-center items-center space-x-4 w-full">
-        {cardsData.slice(currentIndex, currentIndex + 3).map((card) => (
+        {getVisibleCards().map((card) => (
           <motion.div
             key={card.key}
             className="flex-shrink-0"
