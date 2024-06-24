@@ -1,8 +1,7 @@
 // sections/SectionTwo.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Cards from '../components/Cards';
 import { motion } from 'framer-motion';
-import { useEffect } from 'react';
 
 const src = "https://www.instagram.com/shreyashshubh/p/";
 const cardDict = {
@@ -39,6 +38,7 @@ function SectionTwo() {
       cardsData[(currentIndex + 2) % cardsData.length],
     ];
   };
+
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
@@ -49,14 +49,19 @@ function SectionTwo() {
 
   return (
     <section className="h-screen flex justify-center items-center snap-center overflow-hidden scroll-smooth relative">
-      <div className="flex justify-center items-center space-x-4 w-full duration-700 ease-in-out">
+      <div className="flex justify-center items-center space-x-4 w-full overflow-hidden relative">
         {getVisibleCards().map((card) => (
           <motion.div
             key={card.key}
             className="flex-shrink-0"
-            initial={{ scale: 0 }}
-            animate={{ rotate: 360, scale: 1 }}
-            transition={{ type: "tween", duration: 0.3 }}
+            layout // Enable layout animations
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{opacity: 0, scale:0.5, x:-100}}
+            transition={{
+              duration: 0.5,
+              ease: "easeInOut",
+            }}
           >
             <Cards imageUrl={card.imageUrl} caption={card.caption} link={card.link} />
           </motion.div>
