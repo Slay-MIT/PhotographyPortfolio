@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Cards from '../components/Cards';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 
 const src = "https://www.instagram.com/shreyashshubh/p/";
 const cardDict = {
@@ -38,10 +39,17 @@ function SectionTwo() {
       cardsData[(currentIndex + 2) % cardsData.length],
     ];
   };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 4000); // Change the interval time as needed (2000ms = 2 seconds)
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [currentIndex]);
 
   return (
     <section className="h-screen flex justify-center items-center snap-center overflow-hidden scroll-smooth relative">
-      <div className="flex justify-center items-center space-x-4 w-full">
+      <div className="flex justify-center items-center space-x-4 w-full duration-700 ease-in-out">
         {getVisibleCards().map((card) => (
           <motion.div
             key={card.key}
