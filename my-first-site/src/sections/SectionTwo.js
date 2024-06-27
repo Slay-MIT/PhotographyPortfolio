@@ -7,10 +7,10 @@ const src = "https://www.instagram.com/shreyashshubh/p/";
 const cardDict = {
   "1": [src + "C0Dm5i6yS2D/", "Lightning", "InstaPics/lightning.webp"],
   "2": [src + "C2wL5VKS5d6/", "Gift of Time", "InstaPics/watch.webp"],
-  "3": [src + "CxQAuPzLYou/", "Overcast Hour", "InstaPics/tower.webp"],
+  "3": [src + "Cu1mr1OL6R0/", "Overcast Hour", "InstaPics/tower.webp"],
   "4": [src + "CzZGR7qMe2x/", "Wild Skies", "InstaPics/ishanMac.webp"],
-  "5": [src + "CrbRkxYr5zJ/", "Drive", "InstaPics/car.webp"],
-  "6": [src + "Cu1mr1OL6R0/", "Curious Ginge", "InstaPics/cat.webp"],
+  "5": [src + "CzVYXNTtPLe/", "Drive", "InstaPics/car.webp"],
+  "6": [src + "CtOEHijrw_g/", "Curious Ginge", "InstaPics/cat.webp"],
 };
 
 function SectionTwo() {

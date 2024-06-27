@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 
 function Cards({ imageUrl, caption, link }) {
   return (
-    <motion.div 
+    <motion.div
       className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 "
       whileHover={{
-        scale: 1.05, 
+        scale: 1.05,
         rotate: 0,
         translateY: -10,
         transition: { duration: 0.3 }
