@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 function Header() {
   const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem('darkMode') === 'true';
+    return localStorage.getItem('darkMode') === 'false';
   });
 
   useEffect(() => {
