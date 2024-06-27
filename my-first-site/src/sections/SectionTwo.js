@@ -5,22 +5,22 @@ import { motion } from 'framer-motion';
 
 const src = "https://www.instagram.com/shreyashshubh/p/";
 const cardDict = {
-  "1": [src + "C0Dm5i6yS2D/", "Lightning"],
-  "2": [src + "C2wL5VKS5d6/", "Watch"],
-  "3": [src + "CxQAuPzLYou/", "Tower"],
-  "4": [src + "CzZGR7qMe2x/", "Something"],
-  "5": [src + "CrbRkxYr5zJ/", "Something-2"],
-  "6": [src + "Cu1mr1OL6R0/", "Something-3"],
+  "1": [src + "C0Dm5i6yS2D/", "Lightning", "InstaPics/lightning.webp"],
+  "2": [src + "C2wL5VKS5d6/", "Gift of Time", "InstaPics/watch.webp"],
+  "3": [src + "CxQAuPzLYou/", "Overcast Hour", "InstaPics/tower.webp"],
+  "4": [src + "CzZGR7qMe2x/", "Wild Skies", "InstaPics/ishanMac.webp"],
+  "5": [src + "CrbRkxYr5zJ/", "Drive", "InstaPics/car.webp"],
+  "6": [src + "Cu1mr1OL6R0/", "Curious Ginge", "InstaPics/cat.webp"],
 };
 
 function SectionTwo() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const cardsData = Object.entries(cardDict).map(([key, [link, caption]]) => ({
+  const cardsData = Object.entries(cardDict).map(([key, [link, caption, imageUrl]]) => ({
     key,
     link,
     caption,
-    imageUrl: "https://via.placeholder.com/400", // Replace with actual image URL if needed
+    imageUrl // Replace with actual image URL if needed
   }));
 
   const handlePrev = () => {
@@ -50,6 +50,7 @@ function SectionTwo() {
   return (
     <section className="h-screen flex justify-center items-center snap-center overflow-hidden scroll-smooth relative">
       <div className="flex justify-center items-center space-x-4 w-full relative">
+        
         {getVisibleCards().map((card) => (
           <motion.div
             key={card.key}
