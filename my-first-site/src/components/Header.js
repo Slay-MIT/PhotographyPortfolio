@@ -13,7 +13,6 @@ function Header() {
       document.documentElement.classList.remove("dark");
     }
     localStorage.setItem("darkMode", darkMode);
-    console.log(darkMode);
   }, [darkMode]);
 
   const toggleDarkMode = () => {
