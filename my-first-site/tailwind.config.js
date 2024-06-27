@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: 'selector',
   content: [
     './src/**/*.{js,jsx,ts,tsx}', // Ensure this path matches your project structure
   ],
