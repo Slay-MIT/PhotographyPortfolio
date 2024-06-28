@@ -19,14 +19,15 @@ function Cards({ imageUrl, caption, link }) {
           className="rounded-t-lg"
           src={imageUrl}
           alt="Instagram Post"
+          href={link}
         />
       </a>
       <div className="p-5">
-        <a href={link} target="_blank" rel="noopener noreferrer">
+        {/* <a href={link} target="_blank" rel="noopener noreferrer"> */}
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white font-playwrite">
             {caption}
           </h5>
-        </a>
+        {/* </a> */}
       </div>
     </motion.div>
   );

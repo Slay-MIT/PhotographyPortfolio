@@ -34,6 +34,14 @@ function SectionTwo() {
     setCurrentIndex(index);
   };
 
+  const handleDragEnd = (event, info) => {
+    if (info.offset.x < -50) {
+      handleNext();
+    } else if (info.offset.x > 50) {
+      handlePrev();
+    }
+  };
+
   const getVisibleCards = () => {
     return [
       cardsData[currentIndex],
@@ -53,30 +61,34 @@ function SectionTwo() {
   return (
     <section className="h-screen flex justify-center items-center overflow-hidden scroll-smooth relative bg-origin-padding mt-0">
       <div className="flex justify-center items-center space-x-4 w-full relative">
-        <motion.div
+      <motion.div
           className="flex justify-center items-center space-x-4 w-full relative"
           drag="x"
-          dragConstraints={{ left: -300, right: 300 }}
+          dragConstraints={{ left: -100, right: 100 }}
           dragElastic={0.1}
-          onDragEnd={(event, info) => {
-            if (info.offset.x < -50) {
-              handleNext();
-            } else if (info.offset.x > 50) {
-              handlePrev();
-            }
-          }}
+          onDragEnd={handleDragEnd}
         >
-          {getVisibleCards().map((card) => (
+          {getVisibleCards().map((card, index) => (
             <motion.div
               key={card.key}
               className="flex-shrink-0"
-              layout // Enable layout animations
+              layout
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.5, x: -100 }}
+              exit={{ opacity: 0, scale: 0.5, x: index === 1 ? 0 : index === 0 ? -100 : 100 }}
               transition={{
                 duration: 0.5,
                 ease: "easeInOut",
+              }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.1}
+              onDragEnd={(event, info) => {
+                if (info.offset.x > 50) {
+                  handlePrev();
+                } else if (info.offset.x < -50) {
+                  handleNext();
+                }
               }}
             >
               <Cards imageUrl={card.imageUrl} caption={card.caption} link={card.link} />
