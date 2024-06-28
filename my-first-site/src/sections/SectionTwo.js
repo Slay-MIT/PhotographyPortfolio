@@ -96,7 +96,7 @@ function SectionTwo() {
           ))}
         </motion.div>
       </div>
-      <button
+      {/* <button
         onClick={handlePrev}
         className="absolute left-10 p-2 dark:bg-slate-700 hover:bg-blue-300 bg-slate-900 text-white rounded-full transform -translate-y-1/2"
         style={{ top: '50%' }}
@@ -113,7 +113,7 @@ function SectionTwo() {
         <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
           <path d="M5.99984 4.00012L10 8.00029L5.99748 12.0028" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-      </button>
+      </button> */}
       <div className="absolute z-30 flex -translate-x-1/2 bottom-12 left-1/2 space-x-3">
         {cardsData.map((_, index) => (
           <button
