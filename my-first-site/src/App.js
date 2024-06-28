@@ -7,7 +7,7 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 const parallaxImages = [
   "Parallax/mountains.png",
   "Parallax/jungle1.png",
-  "Parallax/jungle2.png",
+  "Parallax/jungle2V2.png",
   "Parallax/jungle3.png",
   "Parallax/jungle4.png",
   "Parallax/jungle5.png",
@@ -27,6 +27,7 @@ function App() {
                 backgroundPosition: "center",
                 height: "100%",
                 width: "100%",
+                
               }}
             />
           </ParallaxLayer>
@@ -110,7 +111,7 @@ function App() {
             offset={1}
             speed={0.1}
             style={{
-              display: "flex",
+              display: "relative",
               justifyContent: "center",
               alignItems: "center",
             }}
