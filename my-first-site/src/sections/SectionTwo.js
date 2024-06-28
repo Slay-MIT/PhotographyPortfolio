@@ -48,7 +48,7 @@ function SectionTwo() {
   }, [currentIndex]);
 
   return (
-    <section className="h-screen flex justify-center items-center snap-center overflow-hidden scroll-smooth relative">
+    <section className="h-screen flex justify-center items-center overflow-hidden scroll-smooth relative bg-origin-padding mt-0">
       <div className="flex justify-center items-center space-x-4 w-full relative">
         
         {getVisibleCards().map((card) => (
