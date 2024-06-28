@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         playwrite: ['"Playwrite PL"', 'sans-serif'],
+        NotoSerif: ['"Noto Serif', 'sans-serif'],
       },
     },
   },

@@ -23,7 +23,7 @@ function Cards({ imageUrl, caption, link }) {
       </a>
       <div className="p-5">
         <a href={link} target="_blank" rel="noopener noreferrer">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white font-playwrite">
             {caption}
           </h5>
         </a>

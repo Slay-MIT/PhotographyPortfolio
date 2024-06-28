@@ -9,7 +9,7 @@ const cardDict = {
   "3": [src + "Cu1mr1OL6R0/", "Overcast Hour", "InstaPics/tower.webp"],
   "4": [src + "CzZGR7qMe2x/", "Wild Skies", "InstaPics/ishanMac.webp"],
   "5": [src + "CzVYXNTtPLe/", "Drive", "InstaPics/car.webp"],
-  "6": [src + "CtOEHijrw_g/", "Curious Ginge", "InstaPics/cat.webp"],
+  "6": [src + "CtOEHijrw_g/", "Curious Ginger", "InstaPics/cat.webp"],
 };
 
 function SectionTwo() {
