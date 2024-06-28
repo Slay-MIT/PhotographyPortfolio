@@ -1,4 +1,3 @@
-// sections/SectionTwo.js
 import React, { useState, useEffect } from 'react';
 import Cards from '../components/Cards';
 import { motion } from 'framer-motion';
@@ -42,7 +41,7 @@ function SectionTwo() {
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 4000); // Change the interval time as needed (2000ms = 2 seconds)
+    }, 4000); // Change the interval time as needed (4000ms = 4 seconds)
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, [currentIndex]);
@@ -50,23 +49,36 @@ function SectionTwo() {
   return (
     <section className="h-screen flex justify-center items-center overflow-hidden scroll-smooth relative bg-origin-padding mt-0">
       <div className="flex justify-center items-center space-x-4 w-full relative">
-        
-        {getVisibleCards().map((card) => (
-          <motion.div
-            key={card.key}
-            className="flex-shrink-0"
-            layout // Enable layout animations
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{opacity: 0, scale:0.5, x:-100}}
-            transition={{
-              duration: 0.5,
-              ease: "easeInOut",
-            }}
-          >
-            <Cards imageUrl={card.imageUrl} caption={card.caption} link={card.link} />
-          </motion.div>
-        ))}
+        <motion.div
+          className="flex justify-center items-center space-x-4 w-full relative"
+          drag="x"
+          dragConstraints={{ left: -300, right: 300 }}
+          dragElastic={0.1}
+          onDragEnd={(event, info) => {
+            if (info.offset.x < -50) {
+              handleNext();
+            } else if (info.offset.x > 50) {
+              handlePrev();
+            }
+          }}
+        >
+          {getVisibleCards().map((card) => (
+            <motion.div
+              key={card.key}
+              className="flex-shrink-0"
+              layout // Enable layout animations
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.5, x: -100 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeInOut",
+              }}
+            >
+              <Cards imageUrl={card.imageUrl} caption={card.caption} link={card.link} />
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
       <button
         onClick={handlePrev}
