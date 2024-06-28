@@ -19,7 +19,7 @@ function SectionTwo() {
     key,
     link,
     caption,
-    imageUrl // Replace with actual image URL if needed
+    imageUrl
   }));
 
   const handlePrev = () => {
@@ -28,6 +28,10 @@ function SectionTwo() {
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1 === cardsData.length ? 0 : prevIndex + 1));
+  };
+
+  const handleSelect = (index) => {
+    setCurrentIndex(index);
   };
 
   const getVisibleCards = () => {
@@ -82,7 +86,7 @@ function SectionTwo() {
       </div>
       <button
         onClick={handlePrev}
-        className="absolute left-10 p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full transform -translate-y-1/2"
+        className="absolute left-10 p-2 dark:bg-slate-700 hover:bg-blue-300 bg-slate-900 text-white rounded-full transform -translate-y-1/2"
         style={{ top: '50%' }}
       >
         <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
@@ -91,13 +95,25 @@ function SectionTwo() {
       </button>
       <button
         onClick={handleNext}
-        className="absolute right-10 p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full transform -translate-y-1/2"
+        className="absolute right-10 p-2 dark:bg-slate-700 hover:bg-blue-300 bg-slate-900 text-white rounded-full transform -translate-y-1/2"
         style={{ top: '50%' }}
       >
         <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
           <path d="M5.99984 4.00012L10 8.00029L5.99748 12.0028" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </button>
+      <div className="absolute z-30 flex -translate-x-1/2 bottom-12 left-1/2 space-x-3">
+        {cardsData.map((_, index) => (
+          <button
+            key={index}
+            type="button"
+            className={`w-3 h-3 rounded-full ${index === currentIndex ? 'dark:bg-blue-700  bg-slate-900' : 'bg-gray-300 hover:bg-blue-300'}`}
+            aria-current={index === currentIndex}
+            aria-label={`Slide ${index + 1}`}
+            onClick={() => handleSelect(index)}
+          />
+        ))}
+      </div>
     </section>
   );
 }
