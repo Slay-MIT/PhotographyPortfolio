@@ -124,7 +124,7 @@ function App() {
             offset={2}
             speed={0.35}
             style={{
-              display: "flex",
+              display: "relative",
               justifyContent: "center",
               alignItems: "center",
             }}
