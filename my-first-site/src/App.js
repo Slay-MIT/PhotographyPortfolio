@@ -27,6 +27,8 @@ function App() {
                 backgroundPosition: "center",
                 height: "100%",
                 width: "100%",
+                loading: "lazy"
+
 
               }}
             />
@@ -54,6 +56,8 @@ function App() {
                 backgroundPosition: "center",
                 height: "100%",
                 width: "100%",
+                loading: "lazy"
+
               }}
             />
           </ParallaxLayer>
@@ -66,6 +70,8 @@ function App() {
                 backgroundPosition: "center",
                 height: "100%",
                 width: "100%",
+                loading: "lazy"
+
               }}
             />
           </ParallaxLayer>
@@ -78,6 +84,8 @@ function App() {
                 backgroundPosition: "center",
                 height: "100%",
                 width: "100%",
+                loading: "lazy"
+
               }}
             />
           </ParallaxLayer>
@@ -90,6 +98,8 @@ function App() {
                 backgroundPosition: "center",
                 height: "100%",
                 width: "100%",
+                loading: "lazy"
+
               }}
             />
           </ParallaxLayer>
@@ -102,6 +112,8 @@ function App() {
                 backgroundPosition: "center",
                 height: "100%",
                 width: "100%",
+                loading: "lazy"
+
               }}
             />
           </ParallaxLayer>
