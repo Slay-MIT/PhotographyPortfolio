@@ -1,10 +1,9 @@
-import React from 'react'
-
+import React from 'react';
 
 export default function NavbarGrid() {
   return (
-    <div>
-        <nav className="top-0 relative z-10 bg-gray-800 p-4">
+    <div className="w-full h-auto sticky z-50">
+      <nav className="relative z-10 bg-gray-800 p-4 w-full">
         <ul className="flex space-x-4">
           <li>
             <button className="text-white">Abstract</button>
@@ -21,5 +20,5 @@ export default function NavbarGrid() {
         </ul>
       </nav>
     </div>
-  )
+  );
 }

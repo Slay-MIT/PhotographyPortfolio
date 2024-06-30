@@ -80,17 +80,24 @@ function App() {
             <SectionTwo />
           </ParallaxLayer>
 
-          <ParallaxLayer sticky={{start:2}} className="overflow-auto">
-            <NavbarGrid></NavbarGrid>
-          </ParallaxLayer>
+           {/* <ParallaxLayer
+            sticky={{ start: 2}}
+            className="h-auto z-50 flex"
+            style={{ height: 'auto' }}
+          >
+            <NavbarGrid />
+          </ParallaxLayer> */}
+          {/* <NavbarGrid></NavbarGrid> */}
 
           {/* SectionThree Layer */}
           <ParallaxLayer
             offset={2}
             speed={0.35}
-            className="relative flex justify-center items-center"
+            className="relative flex justify-center items-start"
           >
-            <SectionThree />
+            {/* <div className="w-full h-full overflow-visible"> */}
+              <SectionThree />
+            {/* </div> */}
           </ParallaxLayer>
         </Parallax>
       </div>
