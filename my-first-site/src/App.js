@@ -27,7 +27,7 @@ function App() {
                 backgroundPosition: "center",
                 height: "100%",
                 width: "100%",
-                
+
               }}
             />
           </ParallaxLayer>

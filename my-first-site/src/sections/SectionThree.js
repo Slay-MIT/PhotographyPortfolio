@@ -3,7 +3,7 @@ import imageData from "../components/imageData";
 
 function SectionThree() {
   return (
-    <section className="overflow-y-auto flex flex-col scroll-smooth">
+    <section className="overflow-y flex-col scroll-smooth">
       <nav className="flex items-center p-4 bg-gray-800 padding">
         <ul className="flex space-x-4">
           <li>
@@ -20,7 +20,7 @@ function SectionThree() {
           </li>
         </ul>
       </nav>
-      <div className="flex justify-center items-center flex-grow overflow-auto">
+      <div className="flex justify-center items-center flex-grow">
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           <div className="grid gap-4">
             <div>
