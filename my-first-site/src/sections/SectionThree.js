@@ -1,9 +1,10 @@
 import React from "react";
+// import NavbarGrid from "../components/NavbarGrid";
 
 function SectionThree() {
   return (
     <section className="flex flex-col overflow-visible">
-      <nav className="top-0 relative z-10 bg-gray-800 p-4">
+      {/* <nav className="top-0 relative z-10 bg-gray-800 p-4">
         <ul className="flex space-x-4">
           <li>
             <button className="text-white">Abstract</button>
@@ -18,19 +19,13 @@ function SectionThree() {
             <button className="text-white">Architecture</button>
           </li>
         </ul>
-      </nav>
+      </nav> */}
       <div className=" mx-auto px-4 py-8 flex-grow overflow-visible">
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 h-screen">
-          <div className="grid gap-4">
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg object-cover object-center"
-                src="/Grid Images/Abstract/DSCF0287-2.webp"
-                alt="gallery-photo"
-                loading="lazy"
-              />
-            </div>
-            <div>
+        <div className="grid grid-cols-4 gap-4 md:grid-cols-4 h-screen">
+
+          
+          {/* <div className="grid gap-4"> */}
+            <div className="col-span-2">
               <img
                 className="h-auto max-w-full rounded-lg object-cover object-center"
                 src="/Grid Images/Abstract/DSCF0311.webp"
@@ -38,17 +33,36 @@ function SectionThree() {
                 loading="lazy"
               />
             </div>
-            <div>
+            <div className="row-span-2 place-content-end">
               <img
                 className="h-auto max-w-full rounded-lg object-cover object-center"
-                src="/Grid Images/Abstract/DSCF7320-9.webp"
+                src="/Grid Images/Concert/DSCF3984.webp"
                 alt="gallery-photo"
                 loading="lazy"
               />
             </div>
-          </div>
-          <div className="grid gap-4">
-            <div>
+            <div className="row-span-2 ">
+              <img
+                className="h-auto max-w-full rounded-lg object-cover object-center"
+                src="/Grid Images/Landscape/DSCF4382.webp"
+                alt="gallery-photo"
+                loading="lazy"
+              />
+            </div>
+          {/* </div> */}
+
+
+
+          {/* <div className="grid gap-4"> */}
+          <div className="col-span-2 row-start-2 grow">
+              <img
+                className="h-auto max-w-full rounded-lg object-cover object-center"
+                src="/Grid Images/Concert/DSCF4288.webp"
+                alt="gallery-photo"
+                loading="lazy"
+              />
+            </div>
+            <div className="grid-flow-row-dense flex flex-1 grow">
               <img
                 className="h-auto max-w-full rounded-lg object-cover object-center"
                 src="/Grid Images/Architecture/DSCF0567.webp"
@@ -56,18 +70,21 @@ function SectionThree() {
                 loading="lazy"
               />
             </div>
-            <div>
+            <div className="">
               <img
                 className="h-auto max-w-full rounded-lg object-cover object-center"
-                src="/Grid Images/Architecture/DSCF0763-9.webp"
+                src="/Grid Images/Abstract/DSCF0287-2.webp"
                 alt="gallery-photo"
                 loading="lazy"
               />
             </div>
+            
+          {/* </div> */}
+          {/* <div className="grid gap-4 overflow-visible"> */}
             <div>
               <img
                 className="h-auto max-w-full rounded-lg object-cover object-center"
-                src="/Grid Images/Architecture/DSCF1466.webp"
+                src="/Grid Images/Concert/IMG_3405.webp"
                 alt="gallery-photo"
                 loading="lazy"
               />
@@ -80,8 +97,6 @@ function SectionThree() {
                 loading="lazy"
               />
             </div>
-          </div>
-          <div className="grid gap-4 overflow-visible">
             <div>
               <img
                 className="h-auto max-w-full rounded-lg object-cover object-center"
@@ -90,30 +105,8 @@ function SectionThree() {
                 loading="lazy"
               />
             </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg object-cover object-center"
-                src="/Grid Images/Concert/DSCF3984.webp"
-                alt="gallery-photo"
-                loading="lazy"
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg object-cover object-center"
-                src="/Grid Images/Concert/DSCF4288.webp"
-                alt="gallery-photo"
-                loading="lazy"
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg object-cover object-center"
-                src="/Grid Images/Concert/IMG_3405.webp"
-                alt="gallery-photo"
-                loading="lazy"
-              />
-            </div>
+          {/* </div> */}
+          {/* <div className="grid gap-4 overflow-visible"> */}
             <div>
               <img
                 className="h-auto max-w-full rounded-lg object-cover object-center"
@@ -122,8 +115,14 @@ function SectionThree() {
                 loading="lazy"
               />
             </div>
-          </div>
-          <div className="grid gap-4 overflow-visible">
+            <div>
+              <img
+                className="h-auto max-w-full rounded-lg object-cover object-center"
+                src="/Grid Images/Architecture/DSCF1466.webp"
+                alt="gallery-photo"
+                loading="lazy"
+              />
+            </div>
             <div>
               <img
                 className="h-auto max-w-full rounded-lg object-cover object-center"
@@ -140,15 +139,7 @@ function SectionThree() {
                 loading="lazy"
               />
             </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg object-cover object-center"
-                src="/Grid Images/Landscape/DSCF4382.webp"
-                alt="gallery-photo"
-                loading="lazy"
-              />
-            </div>
-          </div>
+          {/* </div> */}
         </div>
       </div>
     </section>
