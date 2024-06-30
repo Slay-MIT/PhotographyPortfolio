@@ -2,8 +2,8 @@ import React from "react";
 
 function SectionThree() {
   return (
-    <section className="min-h-screen flex flex-col overflow-y-auto">
-      <nav className="sticky top-0 z-10 bg-gray-800 p-4">
+    <section className="flex flex-col overflow-visible">
+      <nav className="top-0 relative z-10 bg-gray-800 p-4">
         <ul className="flex space-x-4">
           <li>
             <button className="text-white">Abstract</button>
@@ -19,8 +19,8 @@ function SectionThree() {
           </li>
         </ul>
       </nav>
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+      <div className=" mx-auto px-4 py-8 flex-grow overflow-visible">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 h-screen">
           <div className="grid gap-4">
             <div>
               <img
@@ -81,7 +81,7 @@ function SectionThree() {
               />
             </div>
           </div>
-          <div className="grid gap-4">
+          <div className="grid gap-4 overflow-visible">
             <div>
               <img
                 className="h-auto max-w-full rounded-lg object-cover object-center"
@@ -123,7 +123,7 @@ function SectionThree() {
               />
             </div>
           </div>
-          <div className="grid gap-4">
+          <div className="grid gap-4 overflow-visible">
             <div>
               <img
                 className="h-auto max-w-full rounded-lg object-cover object-center"

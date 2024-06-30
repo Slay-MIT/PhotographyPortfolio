@@ -12,3 +12,8 @@
     text-stroke: 1px black;
   }
 }
+
+.custom-parallax > div {
+  overflow: visible !important;
+}
+

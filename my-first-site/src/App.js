@@ -16,21 +16,13 @@ const parallaxImages = [
 function App() {
   return (
     <div className="App">
-      <div className="dark:bg-gradient-to-t from-purple-800 to-slate-900 bg-slate-400 snap-y snap-mandatory h-screen overflow-auto snap-center scroll-smooth">
-        <Parallax pages={3} style={{ top: "0", left: "0", width: "100%" }}>
+      <div className="dark:bg-gradient-to-t from-purple-800 to-slate-900 bg-slate-400 snap-y h-screen overflow-visible snap-center scroll-smooth">
+        <Parallax pages={3} style={{ top: "0", left: "0", width: "100%" }} className="custom-parallax">
           {/* Background layers for parallax effect */}
           <ParallaxLayer offset={0} speed={0.3}>
             <div
-              style={{
-                backgroundImage: `url(${parallaxImages[0]})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: "100%",
-                width: "100%",
-                loading: "lazy"
-
-
-              }}
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${parallaxImages[0]})` }}
             />
           </ParallaxLayer>
 
@@ -38,83 +30,43 @@ function App() {
           <ParallaxLayer
             offset={0}
             speed={-0.1}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              zIndex : 1
-            }}
+            className="flex justify-center items-center z-10"
           >
             <Header />
           </ParallaxLayer>
 
           <ParallaxLayer offset={0} speed={0.3}>
             <div
-              style={{
-                backgroundImage: `url(${parallaxImages[1]})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: "100%",
-                width: "100%",
-                loading: "lazy"
-
-              }}
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${parallaxImages[1]})` }}
             />
           </ParallaxLayer>
 
           <ParallaxLayer offset={0} speed={0.35}>
             <div
-              style={{
-                backgroundImage: `url(${parallaxImages[2]})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: "100%",
-                width: "100%",
-                loading: "lazy"
-
-              }}
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${parallaxImages[2]})` }}
             />
           </ParallaxLayer>
 
           <ParallaxLayer offset={0} speed={0.5}>
             <div
-              style={{
-                backgroundImage: `url(${parallaxImages[3]})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: "100%",
-                width: "100%",
-                loading: "lazy"
-
-              }}
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${parallaxImages[3]})` }}
             />
           </ParallaxLayer>
 
           <ParallaxLayer offset={0} speed={0.45}>
             <div
-              style={{
-                backgroundImage: `url(${parallaxImages[4]})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: "100%",
-                width: "100%",
-                loading: "lazy"
-
-              }}
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${parallaxImages[4]})` }}
             />
           </ParallaxLayer>
 
           <ParallaxLayer offset={0} speed={0.40}>
             <div
-              style={{
-                backgroundImage: `url(${parallaxImages[5]})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: "100%",
-                width: "100%",
-                loading: "lazy"
-
-              }}
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${parallaxImages[5]})` }}
             />
           </ParallaxLayer>
 
@@ -122,11 +74,7 @@ function App() {
           <ParallaxLayer
             offset={1}
             speed={0.1}
-            style={{
-              display: "relative",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
+            className="relative flex justify-center items-center"
           >
             <SectionTwo />
           </ParallaxLayer>
@@ -135,11 +83,7 @@ function App() {
           <ParallaxLayer
             offset={2}
             speed={0.35}
-            style={{
-              display: "relative",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
+            className="relative flex justify-center items-center"
           >
             <SectionThree />
           </ParallaxLayer>
