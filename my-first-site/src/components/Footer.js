@@ -37,7 +37,7 @@ function Footer() {
         </a>
         <a
           href="mailto:shreyash148@gmail.com"
-          className="text-blue-500 hover:underline dark:text-blue-300"
+          className="dark:text-slate-200 text-slate-700 hover:underline hover:text-blue-300"
         >
           Contact Me
         </a>
