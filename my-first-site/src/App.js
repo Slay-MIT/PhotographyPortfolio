@@ -2,8 +2,6 @@ import "./App.css";
 import Header from "./components/Header";
 import Carousel from "./sections/Carousel";
 import Gallery from "./sections/Gallery";
-import NavbarGrid from "./components/NavbarGrid";
-import Footer from "./components/Footer";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 const parallaxImages = [
