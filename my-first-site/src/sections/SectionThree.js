@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ImageModal from "../components/ImageModal";
+import Footer from "../components/Footer";
 
 function SectionThree() {
   const [modalIsOpen, setModalIsOpen] = useState(false);

@@ -2,7 +2,8 @@ import "./App.css";
 import Header from "./components/Header";
 import SectionTwo from "./sections/SectionTwo";
 import SectionThree from "./sections/SectionThree";
-import NavbarGrid from "./components/NavbarGrid"
+import NavbarGrid from "./components/NavbarGrid";
+import Footer from "./components/Footer";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 const parallaxImages = [
@@ -80,27 +81,19 @@ function App() {
             <SectionTwo />
           </ParallaxLayer>
 
-           {/* <ParallaxLayer
-            sticky={{ start: 2}}
-            className="h-auto z-50 flex"
-            style={{ height: 'auto' }}
-          >
-            <NavbarGrid />
-          </ParallaxLayer> */}
-          {/* <NavbarGrid></NavbarGrid> */}
-
           {/* SectionThree Layer */}
           <ParallaxLayer
             offset={2}
             speed={0.35}
             className="relative flex justify-center items-start"
           >
-            {/* <div className="w-full h-full overflow-visible"> */}
-              <SectionThree />
-            {/* </div> */}
+            <SectionThree />
           </ParallaxLayer>
         </Parallax>
+        {/* Footer outside Parallax to be below SectionThree */}
+        
       </div>
+      {/* <Footer className="bottom-0 " /> */}
     </div>
   );
 }
