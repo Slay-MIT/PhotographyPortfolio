@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <div className="dark:bg-gradient-to-t from-purple-800 to-slate-900 bg-slate-400 snap-y h-screen overflow-visible snap-center scroll-smooth">
-        <Parallax pages={4} style={{ top: "0", left: "0", width: "100%" }} className="custom-parallax">
+        <Parallax pages={3} style={{ top: "0", left: "0", width: "100%" }} className="custom-parallax">
           {/* Background layers for parallax effect */}
           <ParallaxLayer offset={0} speed={0.3}>
             <div
@@ -89,6 +89,17 @@ function App() {
           >
             <SectionThree />
           </ParallaxLayer>
+
+
+        {/* <ParallaxLayer 
+          offset={3}
+        > */}
+        {/* <Footer className="bottom-0 place-content-end" ></Footer> */}
+
+        {/* </ParallaxLayer> */}
+          
+
+        
         </Parallax>
         {/* Footer outside Parallax to be below SectionThree */}
         

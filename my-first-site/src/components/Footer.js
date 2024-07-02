@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-4 ">
+    <footer className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 py-4 w-full">
       <div className="  flex justify-between items-center px-4">
         <a
           href="https://www.instagram.com/shreyashshubh"

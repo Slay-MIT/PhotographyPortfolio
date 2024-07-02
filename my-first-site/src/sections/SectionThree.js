@@ -34,8 +34,8 @@ function SectionThree() {
   };
 
   return (
-    <section className="w-full h-full z-30">
-      <div className="mx-auto px-4 py-8">
+    <section className="flex flex-col min-h-screen w-full z-30">
+      <div className="flex-grow mx-auto px-4 py-8">
         <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4">
           {images.map((image, index) => (
             <motion.div
@@ -65,6 +65,7 @@ function SectionThree() {
         onRequestClose={closeModal}
         image={selectedImage}
       />
+      <Footer></Footer>
     </section>
   );
 }
