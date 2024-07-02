@@ -18,6 +18,24 @@ function Footer() {
           <span className='dark:text-slate-200 text-slate-700'>@shreyashshubh</span>
         </a>
         <a
+          href="https://github.com/Slay-MIT/ReactProject-1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center space-x-2"
+        >
+          <img
+            src="GithubLogo\github-mark.svg"
+            alt="GitHub Logo Dark"
+            className="h-5 w-5 dark:hidden block"
+          />
+          <img
+            src="GithubLogo\github-mark-white.svg"
+            alt="GitHub Logo Light"
+            className="h-5 w-5 dark:block hidden"
+          />
+          <span className='dark:text-slate-200 text-slate-700'>Slay-MIT</span>
+        </a>
+        <a
           href="mailto:shreyash148@gmail.com"
           className="text-blue-500 hover:underline dark:text-blue-300"
         >
