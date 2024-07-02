@@ -15,7 +15,7 @@ function Footer() {
             alt="Instagram Logo"
             className="h-6 w-6"
           />
-          <span className='dark:text-slate-300 text-slate-700'>Instagram</span>
+          <span className='dark:text-slate-200 text-slate-700'>Instagram</span>
         </a>
         <a
           href="mailto:shreyash148@gmail.com"
