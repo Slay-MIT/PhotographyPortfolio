@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
   return (
     <footer className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 py-4 w-full">
-      <div className="flex justify-between items-center px-4">
+      <div className="flex flex-col justify-between sm:flex-row  items-center px-4 space-y-3 sm:space-y-0 sm:space-x-7">
         <a
           href="https://www.instagram.com/shreyashshubh"
           target="_blank"
@@ -24,12 +24,12 @@ function Footer() {
           className="flex items-center space-x-2"
         >
           <img
-            src="GithubLogo\github-mark.svg"
+            src="GithubLogo/github-mark.svg"
             alt="GitHub Logo Dark"
             className="h-5 w-5 dark:hidden block"
           />
           <img
-            src="GithubLogo\github-mark-white.svg"
+            src="GithubLogo/github-mark-white.svg"
             alt="GitHub Logo Light"
             className="h-5 w-5 dark:block hidden"
           />

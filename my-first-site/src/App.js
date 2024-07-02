@@ -24,8 +24,6 @@ function App() {
           style={{ top: "0", left: "0", width: "100%" }}
           className="custom-parallax"
         >
-          
-
           {/* Background layers for parallax effect */}
           <ParallaxLayer offset={0} speed={0.3}>
             <div
@@ -43,32 +41,28 @@ function App() {
             <Header />
 
             <div className="absolute flex top-4 right-4 ">
-
-            <a
-              href="https://github.com/Slay-MIT/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2"
-            >
-              <img
-                src="GithubLogo\github-mark.svg"
-                alt="GitHub Logo Dark"
-                className="h-5 w-5 dark:hidden block"
-              />
-              <img
-                src="GithubLogo\github-mark-white.svg"
-                alt="GitHub Logo Light"
-                className="h-5 w-5 dark:block hidden"
-              />
-              <span className="dark:text-slate-200 text-slate-700">
-                Slay-MIT
-              </span>
-            </a>
+              <a
+                href="https://github.com/Slay-MIT/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2"
+              >
+                <img
+                  src="GithubLogo\github-mark.svg"
+                  alt="GitHub Logo Dark"
+                  className="h-5 w-5 dark:hidden block"
+                />
+                <img
+                  src="GithubLogo\github-mark-white.svg"
+                  alt="GitHub Logo Light"
+                  className="h-5 w-5 dark:block hidden"
+                />
+                <span className="dark:text-slate-200 text-slate-700">
+                  Slay-MIT
+                </span>
+              </a>
             </div>
-            
           </ParallaxLayer>
-
-          
 
           <ParallaxLayer offset={0} speed={0.3}>
             <div
