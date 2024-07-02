@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import ImageModal from "../components/ImageModal";
 import Footer from "../components/Footer";
 
-function SectionThree() {
+function Gallery() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -70,4 +70,4 @@ function SectionThree() {
   );
 }
 
-export default SectionThree;
+export default Gallery;

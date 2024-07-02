@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
-import SectionTwo from "./sections/SectionTwo";
-import SectionThree from "./sections/SectionThree";
+import Carousel from "./sections/Carousel";
+import Gallery from "./sections/Gallery";
 import NavbarGrid from "./components/NavbarGrid";
 import Footer from "./components/Footer";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
@@ -72,22 +72,22 @@ function App() {
             />
           </ParallaxLayer>
 
-          {/* SectionTwo Layer */}
+          {/* Carousel Layer */}
           <ParallaxLayer
             offset={1}
             speed={0.1}
             className="relative flex justify-center items-center"
           >
-            <SectionTwo />
+            <Carousel />
           </ParallaxLayer>
 
-          {/* SectionThree Layer */}
+          {/* Gallery Layer */}
           <ParallaxLayer
             offset={2}
             speed={0.35}
             className="relative flex justify-center items-start"
           >
-            <SectionThree />
+            <Gallery />
           </ParallaxLayer>
 
 
@@ -101,7 +101,7 @@ function App() {
 
         
         </Parallax>
-        {/* Footer outside Parallax to be below SectionThree */}
+        {/* Footer outside Parallax to be below Gallery */}
         
       </div>
       {/* <Footer className="bottom-0 " /> */}

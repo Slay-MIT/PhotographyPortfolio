@@ -12,7 +12,7 @@ const cardDict = {
   "6": [src + "CtOEHijrw_g/", "Curious Ginger", "InstaPics/cat.webp"],
 };
 
-function SectionTwo() {
+function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const cardsData = Object.entries(cardDict).map(([key, [link, caption, imageUrl]]) => ({
@@ -130,4 +130,4 @@ function SectionTwo() {
   );
 }
 
-export default SectionTwo;
+export default Carousel;
