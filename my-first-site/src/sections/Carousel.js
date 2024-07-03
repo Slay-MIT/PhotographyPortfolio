@@ -59,8 +59,8 @@ function Carousel() {
   }, [currentIndex]);
 
   return (
-    <section className=" h-screen flex justify-center items-center overflow-hidden scroll-smooth relative bg-origin-padding mt-0">
-      <div className="flex justify-center items-center space-x-4 w-full relative">
+    <section className=" h-screen flex justify-center items-center scroll-smooth relative bg-origin-padding mt-0">
+      <div className="flex justify-center items-center space-x-4 w-full relative overflow-visible">
       <motion.div
           className="flex justify-center items-center space-x-4 w-full relative"
           drag="x"
@@ -114,12 +114,12 @@ function Carousel() {
           <path d="M5.99984 4.00012L10 8.00029L5.99748 12.0028" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </button> */}
-      <div className="absolute z-30 flex -translate-x-1/2 bottom-12 left-1/2 space-x-3">
+      <div className="absolute z-30 flex -translate-x-1/2 bottom-12 left-1/2 space-x-3 mt-5 pt-6 ">
         {cardsData.map((_, index) => (
           <button
             key={index}
             type="button"
-            className={`w-3 h-3 rounded-full ${index === currentIndex ? 'dark:bg-blue-700  bg-slate-900' : 'bg-gray-300 hover:bg-blue-300'}`}
+            className={`w-3 h-3 rounded-full ${index === currentIndex ? 'dark:bg-blue-700  bg-slate-900' : 'bg-gray-500 dark:bg-gray-200 hover:bg-blue-300'}`}
             aria-current={index === currentIndex}
             aria-label={`Slide ${index + 1}`}
             onClick={() => handleSelect(index)}
