@@ -59,9 +59,9 @@ function Carousel() {
   }, [currentIndex]);
 
   return (
-    <section className=" h-screen flex justify-center items-center scroll-smooth relative bg-origin-padding mt-0">
+    <section className="h-screen flex grow justify-center items-center scroll-smooth relative bg-origin-padding mt-0 mx-2">
       <div className="flex justify-center items-center space-x-4 w-full relative overflow-visible">
-      <motion.div
+        <motion.div
           className="flex justify-center items-center space-x-4 w-full relative"
           drag="x"
           dragConstraints={{ left: -100, right: 100 }}
@@ -71,7 +71,7 @@ function Carousel() {
           {getVisibleCards().map((card, index) => (
             <motion.div
               key={card.key}
-              className="flex-shrink-0"
+              className="flex-shrink-0 w-full sm:w-auto"
               layout
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -96,30 +96,12 @@ function Carousel() {
           ))}
         </motion.div>
       </div>
-      {/* <button
-        onClick={handlePrev}
-        className="absolute left-10 p-2 dark:bg-slate-700 hover:bg-blue-300 bg-slate-900 text-white rounded-full transform -translate-y-1/2"
-        style={{ top: '50%' }}
-      >
-        <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-          <path d="M10.0002 11.9999L6 7.99971L10.0025 3.99719" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </button>
-      <button
-        onClick={handleNext}
-        className="absolute right-10 p-2 dark:bg-slate-700 hover:bg-blue-300 bg-slate-900 text-white rounded-full transform -translate-y-1/2"
-        style={{ top: '50%' }}
-      >
-        <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-          <path d="M5.99984 4.00012L10 8.00029L5.99748 12.0028" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </button> */}
-      <div className="absolute z-30 flex -translate-x-1/2 bottom-12 left-1/2 space-x-3 mt-5 pt-6 ">
+      <div className="absolute z-30 flex -translate-x-1/2 bottom-12 left-1/2 space-x-3 mt-5 pt-6">
         {cardsData.map((_, index) => (
           <button
             key={index}
             type="button"
-            className={`w-3 h-3 rounded-full ${index === currentIndex ? 'dark:bg-blue-700  bg-slate-900' : 'bg-gray-500 dark:bg-gray-200 hover:bg-blue-300'}`}
+            className={`w-3 h-3 rounded-full ${index === currentIndex ? 'dark:bg-blue-700 bg-slate-900' : 'bg-gray-500 dark:bg-gray-200 hover:bg-blue-300'}`}
             aria-current={index === currentIndex}
             aria-label={`Slide ${index + 1}`}
             onClick={() => handleSelect(index)}

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 function Cards({ imageUrl, caption, link }) {
   return (
     <motion.div
-      className="m-auto max-w-sm bg-slate-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 "
+      className="m-auto max-w-sm sm:max-w-xs md:max-w-sm bg-slate-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       whileHover={{
         scale: 1.05,
         rotate: 0,
@@ -22,11 +22,9 @@ function Cards({ imageUrl, caption, link }) {
         />
       </a>
       <div className="p-5">
-        {/* <a href={link} target="_blank" rel="noopener noreferrer"> */}
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white font-playwrite">
-            {caption}
-          </h5>
-        {/* </a> */}
+        <h5 className="mb-2 text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white font-playwrite">
+          {caption}
+        </h5>
       </div>
     </motion.div>
   );
