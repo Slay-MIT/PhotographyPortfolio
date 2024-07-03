@@ -2,8 +2,6 @@ import React, { Suspense, lazy, useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Carousel from "./sections/Carousel";
-import NavbarGrid from "./components/NavbarGrid";
-import Footer from "./components/Footer";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 const Gallery = lazy(() => import("./sections/Gallery"));
