@@ -64,7 +64,8 @@ To run this project locally, follow these steps:
 ## Screenshots
 
 ### Homepage
-![Homepage](https://github.com/Slay-MIT/PhotographyPortfolio/assets/96829856/a0934659-6613-4a14-9537-60d4fd8d9b31)
+![Homepage](https://github.com/Slay-MIT/PhotographyPortfolio/assets/96829856/99ac41ca-61b8-436a-a013-4e2555b44029)
+
 
 ### Carousel
 ![Carousel](https://github.com/Slay-MIT/PhotographyPortfolio/assets/96829856/c989d36f-670f-4fdc-b46a-af7ffe03a4ff)
