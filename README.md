@@ -10,12 +10,11 @@ Welcome to my Photography Portfolio and Development Showcase project! This proje
 - [Installation](#installation)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
-- [License](#license)
 - [Contact](#contact)
 
 ## Demo
 
-You can view a live demo of the project [here](react-project-1-git-main-slay-mits-projects.vercel.app).
+You can view a live demo of the project [here](https://shreyash-photo-portfolio.vercel.app/).
 
 ## Features
 
@@ -66,17 +65,12 @@ To run this project locally, follow these steps:
 ### Homepage
 ![Homepage](https://github.com/Slay-MIT/PhotographyPortfolio/assets/96829856/99ac41ca-61b8-436a-a013-4e2555b44029)
 
-
 ### Carousel
 ![Carousel](https://github.com/Slay-MIT/PhotographyPortfolio/assets/96829856/c989d36f-670f-4fdc-b46a-af7ffe03a4ff)
 
 ### Gallery
 ![Gallery](https://github.com/Slay-MIT/PhotographyPortfolio/assets/96829856/4955ea93-deed-413e-910d-86c39a111058)
 
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
