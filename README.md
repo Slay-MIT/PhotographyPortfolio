@@ -1,4 +1,4 @@
-# Photography Portfolio
+# 📷 Photography Portfolio
 
 Welcome to my Photography Portfolio and Development Showcase project! This project serves as a dual-purpose platform: a gallery to display my photography work and a demonstration of my web development skills.
 
@@ -64,13 +64,13 @@ To run this project locally, follow these steps:
 ## Screenshots
 
 ### Homepage
-![Homepage](![image](https://github.com/Slay-MIT/PhotographyPortfolio/assets/96829856/a0934659-6613-4a14-9537-60d4fd8d9b31))
+![Homepage](https://github.com/Slay-MIT/PhotographyPortfolio/assets/96829856/a0934659-6613-4a14-9537-60d4fd8d9b31)
 
 ### Carousel
-![Carousel](![image](https://github.com/Slay-MIT/PhotographyPortfolio/assets/96829856/c989d36f-670f-4fdc-b46a-af7ffe03a4ff))
+![Carousel](https://github.com/Slay-MIT/PhotographyPortfolio/assets/96829856/c989d36f-670f-4fdc-b46a-af7ffe03a4ff)
 
 ### Gallery
-![Gallery](![image](https://github.com/Slay-MIT/PhotographyPortfolio/assets/96829856/4955ea93-deed-413e-910d-86c39a111058))
+![Gallery](https://github.com/Slay-MIT/PhotographyPortfolio/assets/96829856/4955ea93-deed-413e-910d-86c39a111058)
 
 
 ## License
