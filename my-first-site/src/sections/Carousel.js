@@ -59,10 +59,10 @@ function Carousel() {
   }, [currentIndex]);
 
   return (
-    <section className="h-screen flex grow justify-center items-center scroll-smooth relative bg-origin-padding mt-0 mx-2">
-      <div className="flex justify-center items-center space-x-4 w-full relative overflow-visible">
+    <section className="min-h-screen flex flex-col justify-center items-center scroll-smooth relative bg-origin-padding py-8 px-4">
+      <div className="flex justify-center items-center w-full relative overflow-visible">
         <motion.div
-          className="flex justify-center items-center space-x-4 w-full relative"
+          className="flex justify-center items-center space-x-1 w-full relative"
           drag="x"
           dragConstraints={{ left: -100, right: 100 }}
           dragElastic={0.1}
@@ -71,7 +71,7 @@ function Carousel() {
           {getVisibleCards().map((card, index) => (
             <motion.div
               key={card.key}
-              className="flex-shrink-0 w-full sm:w-auto"
+              className="flex-shrink-0 w-full max-w-xs sm:max-w-sm md:max-w-md"
               layout
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -96,7 +96,7 @@ function Carousel() {
           ))}
         </motion.div>
       </div>
-      <div className="absolute z-30 flex -translate-x-1/2 bottom-12 left-1/2 space-x-3 mt-5 pt-6">
+      <div className="z-30 flex justify-center space-x-3 mt-8">
         {cardsData.map((_, index) => (
           <button
             key={index}
