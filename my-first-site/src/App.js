@@ -1,8 +1,12 @@
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Carousel from "./sections/Carousel";
-import Gallery from "./sections/Gallery";
+import NavbarGrid from "./components/NavbarGrid";
+import Footer from "./components/Footer";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+
+const Gallery = lazy(() => import("./sections/Gallery"));
 
 const parallaxImages = [
   "Parallax/mountains.png",
@@ -12,6 +16,36 @@ const parallaxImages = [
   "Parallax/jungle4.png",
   "Parallax/jungle5.png",
 ];
+
+function LazyImage({ src, alt, className }) {
+  const [inView, setInView] = useState(false);
+  const imgRef = React.useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={imgRef}
+      className={`${className} ${inView ? "bg-cover bg-center" : "bg-none"}`}
+      style={{ backgroundImage: inView ? `url(${src})` : "none" }}
+      aria-label={alt}
+    />
+  );
+}
 
 function App() {
   return (
@@ -24,10 +58,7 @@ function App() {
         >
           {/* Background layers for parallax effect */}
           <ParallaxLayer offset={0} speed={0.3}>
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${parallaxImages[0]})` }}
-            />
+            <LazyImage src={parallaxImages[0]} alt="Mountains" className="absolute inset-0" />
           </ParallaxLayer>
 
           {/* Header Layer */}
@@ -37,7 +68,6 @@ function App() {
             className="flex justify-center items-center z-10"
           >
             <Header />
-
             <div className="absolute flex top-4 right-4 ">
               <a
                 href="https://github.com/Slay-MIT/"
@@ -46,12 +76,12 @@ function App() {
                 className="flex items-center space-x-2"
               >
                 <img
-                  src="GithubLogo\github-mark.svg"
+                  src="GithubLogo/github-mark.svg"
                   alt="GitHub Logo Dark"
                   className="h-5 w-5 dark:hidden block"
                 />
                 <img
-                  src="GithubLogo\github-mark-white.svg"
+                  src="GithubLogo/github-mark-white.svg"
                   alt="GitHub Logo Light"
                   className="h-5 w-5 dark:block hidden"
                 />
@@ -63,38 +93,23 @@ function App() {
           </ParallaxLayer>
 
           <ParallaxLayer offset={0} speed={0.3}>
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${parallaxImages[1]})` }}
-            />
+            <LazyImage src={parallaxImages[1]} alt="Jungle 1" className="absolute inset-0" />
           </ParallaxLayer>
 
           <ParallaxLayer offset={0} speed={0.35}>
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${parallaxImages[2]})` }}
-            />
+            <LazyImage src={parallaxImages[2]} alt="Jungle 2" className="absolute inset-0" />
           </ParallaxLayer>
 
           <ParallaxLayer offset={0} speed={0.5}>
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${parallaxImages[3]})` }}
-            />
+            <LazyImage src={parallaxImages[3]} alt="Jungle 3" className="absolute inset-0" />
           </ParallaxLayer>
 
           <ParallaxLayer offset={0} speed={0.45}>
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${parallaxImages[4]})` }}
-            />
+            <LazyImage src={parallaxImages[4]} alt="Jungle 4" className="absolute inset-0" />
           </ParallaxLayer>
 
           <ParallaxLayer offset={0} speed={0.4}>
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${parallaxImages[5]})` }}
-            />
+            <LazyImage src={parallaxImages[5]} alt="Jungle 5" className="absolute inset-0" />
           </ParallaxLayer>
 
           {/* Carousel Layer */}
@@ -112,19 +127,12 @@ function App() {
             speed={0.35}
             className="relative flex justify-center items-start"
           >
-            <Gallery />
+            <Suspense fallback={<div>Loading...</div>}>
+              <Gallery />
+            </Suspense>
           </ParallaxLayer>
-
-          {/* <ParallaxLayer 
-          offset={3}
-        > */}
-          {/* <Footer className="bottom-0 place-content-end" ></Footer> */}
-
-          {/* </ParallaxLayer> */}
         </Parallax>
-        {/* Footer outside Parallax to be below Gallery */}
       </div>
-      {/* <Footer className="bottom-0 " /> */}
     </div>
   );
 }

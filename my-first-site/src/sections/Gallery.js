@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import ImageModal from "../components/ImageModal";
 import Footer from "../components/Footer";
@@ -7,7 +7,7 @@ function Gallery() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const images = [
+  const images = useMemo(() => [
     { src: "/Grid Images/Landscape/_A190012.webp", width: 5281, height: 2916, small: "Grid Images/Thumbnail/tinified/_A190012.webp" },
     { src: "/Grid Images/Abstract/DSCF0287-2.webp", width: 3639, height: 5458, small: "Grid Images/Thumbnail/tinified/DSCF0287-2.webp" },
     { src: "/Grid Images/Abstract/DSCF0311.webp", width: 5519, height: 2484, small: "Grid Images/Thumbnail/tinified/DSCF0311.webp" },
@@ -21,7 +21,7 @@ function Gallery() {
     { src: "/Grid Images/Architecture/DSCF8588.webp", width: 4006, height: 5007, small: "Grid Images/Thumbnail/tinified/DSCF8588.webp" },
     { src: "/Grid Images/Concert/IMG_3405.webp", width: 5611, height: 3156, small: "Grid Images/Thumbnail/tinified/IMG_3405.webp" },
     { src: "/Grid Images/Concert/IMG_3981.webp", width: 3300, height: 5866, small: "Grid Images/Thumbnail/tinified/IMG_3981.webp" },
-  ];
+  ], []);
 
   const openModal = (image) => {
     setSelectedImage(image);
@@ -48,6 +48,8 @@ function Gallery() {
               <motion.img
                 className="w-full rounded-lg object-cover object-center"
                 src={image.small}
+                srcSet={`${image.small} 480w, ${image.src} 800w`}
+                sizes="(max-width: 600px) 480px, 800px"
                 alt={`gallery-photo-${index}`}
                 loading="lazy"
                 style={{
@@ -65,7 +67,7 @@ function Gallery() {
         onRequestClose={closeModal}
         image={selectedImage}
       />
-      <Footer></Footer>
+      <Footer />
     </section>
   );
 }
