@@ -57,7 +57,7 @@ To run this project locally, follow these steps:
     ```
 3. **Install dependencies:**
     ```bash
-    npm install
+    npm install react@latest react-dom@latest framer-motion @react-spring/web @react-spring/parallax
     ```
 4. **Start the development server:**
     ```bash
