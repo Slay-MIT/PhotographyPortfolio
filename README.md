@@ -6,10 +6,10 @@ Welcome to my Photography Portfolio and Development Showcase project! This proje
 
 - [Demo](#demo)
 - [Features](#features)
+- [Screenshots](#screenshots)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
 - [Contact](#contact)
 
 ## Demo
@@ -24,6 +24,17 @@ You can view a live demo of the project [here](https://shreyash-photo-portfolio.
 - **Carousel of Cards**: A carousel showcasing selected Instagram posts with smooth animations.
 - **Image Gallery**: A gallery section featuring various categories of images, with modals for enlarged views.
 - **Dark Mode**: Dark mode support for a better viewing experience in low light.
+
+## Screenshots
+
+### Homepage
+![Homepage](https://github.com/Slay-MIT/PhotographyPortfolio/assets/96829856/99ac41ca-61b8-436a-a013-4e2555b44029)
+
+### Carousel
+![Carousel](https://github.com/Slay-MIT/PhotographyPortfolio/assets/96829856/c989d36f-670f-4fdc-b46a-af7ffe03a4ff)
+
+### Gallery
+![Gallery](https://github.com/Slay-MIT/PhotographyPortfolio/assets/96829856/4955ea93-deed-413e-910d-86c39a111058)
 
 ## Technologies Used
 
@@ -59,17 +70,6 @@ To run this project locally, follow these steps:
 2. **Carousel Section:** Showcases selected Instagram posts with hover animations.
 3. **Gallery Section:** Displays various categories of images, with a modal for viewing images in full size.
 4. **Footer:** Contains links to social media profiles and other relevant information.
-
-## Screenshots
-
-### Homepage
-![Homepage](https://github.com/Slay-MIT/PhotographyPortfolio/assets/96829856/99ac41ca-61b8-436a-a013-4e2555b44029)
-
-### Carousel
-![Carousel](https://github.com/Slay-MIT/PhotographyPortfolio/assets/96829856/c989d36f-670f-4fdc-b46a-af7ffe03a4ff)
-
-### Gallery
-![Gallery](https://github.com/Slay-MIT/PhotographyPortfolio/assets/96829856/4955ea93-deed-413e-910d-86c39a111058)
 
 
 ## Contact
